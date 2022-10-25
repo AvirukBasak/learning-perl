@@ -1,14 +1,17 @@
 #!/bin/env perl
 
+use strict;
+use warnings;
+
 sub input
 {
-    $in = <STDIN>;
+    printf $_[0];
+    my $in = <STDIN>;
     chomp $in;
     return $in;
 }
 
-printf "enter name: ";
-$name = input();
-printf "enter age: ";
-$age = input();
+my $name = input("enter name: ");
+my $age = input("enter age: ");
+
 printf $name . " is " . $age . " years old\n";

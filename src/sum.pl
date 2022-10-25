@@ -1,14 +1,17 @@
 #!/bin/env perl
 
+use strict;
+use warnings;
+
 sub input
 {
     printf $_[0];
-    $in = <STDIN>;
+    my $in = <STDIN>;
     chomp $in;
     return $in;
 }
 
-$x = input("enter x = ");
-$y = input("enter y = ");
+my $x = input("enter x = ");
+my $y = input("enter y = ");
 
 printf "sum = " . ($x + $y) . "\n";
